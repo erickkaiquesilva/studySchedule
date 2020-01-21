@@ -15,16 +15,18 @@
 		F46B1B6923D622320060691B /* GuiaEstudoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B6823D622320060691B /* GuiaEstudoTests.swift */; };
 		F46B1B7423D622320060691B /* GuiaEstudoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B7323D622320060691B /* GuiaEstudoUITests.swift */; };
 		F46B1B8823D622DE0060691B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B8723D622DE0060691B /* HomeTableViewController.swift */; };
-		F46B1B8A23D626640060691B /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B8923D626640060691B /* CategoriesTableViewController.swift */; };
 		F46B1B8E23D627710060691B /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B8D23D627710060691B /* Subjects.swift */; };
 		F46B1B9023D628530060691B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B8F23D628530060691B /* HomePresenter.swift */; };
 		F46B1B9223D6286A0060691B /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B9123D6286A0060691B /* HomeProtocols.swift */; };
-		F46B1B9523D62F380060691B /* subjectsAndTeachers.json in Resources */ = {isa = PBXBuildFile; fileRef = F46B1B9423D62F380060691B /* subjectsAndTeachers.json */; };
 		F46B1B9823D634720060691B /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B9723D634720060691B /* Decode.swift */; };
 		F46B1B9B23D6459C0060691B /* RespositoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B9A23D6459C0060691B /* RespositoryHome.swift */; };
 		F46B1B9D23D64EB20060691B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B9C23D64EB20060691B /* HomeTableViewCell.swift */; };
 		F46B1B9F23D64FF90060691B /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1B9E23D64FF90060691B /* Subject.swift */; };
 		F46B1BA223D65A230060691B /* SignUpSubCategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BA123D65A230060691B /* SignUpSubCategorieViewController.swift */; };
+		F46B1BA423D75F540060691B /* subjectsAndTeachers.json in Resources */ = {isa = PBXBuildFile; fileRef = F46B1BA323D75F540060691B /* subjectsAndTeachers.json */; };
+		F46B1BA623D76C4D0060691B /* SignUpSubCategorieProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BA523D76C4D0060691B /* SignUpSubCategorieProtocols.swift */; };
+		F46B1BAA23D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BA923D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift */; };
+		F46B1BAE23D78AAD0060691B /* Categories in Resources */ = {isa = PBXBuildFile; fileRef = F46B1BAD23D78AAD0060691B /* Categories */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,16 +61,18 @@
 		F46B1B7323D622320060691B /* GuiaEstudoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiaEstudoUITests.swift; sourceTree = "<group>"; };
 		F46B1B7523D622320060691B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F46B1B8723D622DE0060691B /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		F46B1B8923D626640060691B /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		F46B1B8D23D627710060691B /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 		F46B1B8F23D628530060691B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		F46B1B9123D6286A0060691B /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
-		F46B1B9423D62F380060691B /* subjectsAndTeachers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = subjectsAndTeachers.json; path = ../../../../../subjectsAndTeachers.json; sourceTree = "<group>"; };
 		F46B1B9723D634720060691B /* Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decode.swift; sourceTree = "<group>"; };
 		F46B1B9A23D6459C0060691B /* RespositoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespositoryHome.swift; sourceTree = "<group>"; };
 		F46B1B9C23D64EB20060691B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		F46B1B9E23D64FF90060691B /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		F46B1BA123D65A230060691B /* SignUpSubCategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSubCategorieViewController.swift; sourceTree = "<group>"; };
+		F46B1BA323D75F540060691B /* subjectsAndTeachers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = subjectsAndTeachers.json; path = ../mocks/subjectsAndTeachers.json; sourceTree = SOURCE_ROOT; };
+		F46B1BA523D76C4D0060691B /* SignUpSubCategorieProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSubCategorieProtocols.swift; sourceTree = "<group>"; };
+		F46B1BA923D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSubCategoriePickerViewDataSource.swift; sourceTree = "<group>"; };
+		F46B1BAD23D78AAD0060691B /* Categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Categories; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +160,7 @@
 				F46B1B8B23D627330060691B /* Models */,
 				F46B1BA023D65A020060691B /* SignUpSubCategorie */,
 				F46B1B8523D6227E0060691B /* SubCategories */,
-				F46B1B8623D622960060691B /* Categories */,
+				F46B1BAD23D78AAD0060691B /* Categories */,
 				F46B1B8223D6224E0060691B /* Home */,
 			);
 			path = App;
@@ -180,14 +184,6 @@
 			path = SubCategories;
 			sourceTree = "<group>";
 		};
-		F46B1B8623D622960060691B /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				F46B1B8923D626640060691B /* CategoriesTableViewController.swift */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		F46B1B8B23D627330060691B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +205,7 @@
 		F46B1B9323D62BDF0060691B /* DataFake */ = {
 			isa = PBXGroup;
 			children = (
-				F46B1B9423D62F380060691B /* subjectsAndTeachers.json */,
+				F46B1BA323D75F540060691B /* subjectsAndTeachers.json */,
 			);
 			path = DataFake;
 			sourceTree = "<group>";
@@ -234,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				F46B1BA123D65A230060691B /* SignUpSubCategorieViewController.swift */,
+				F46B1BA523D76C4D0060691B /* SignUpSubCategorieProtocols.swift */,
+				F46B1BA923D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift */,
 			);
 			path = SignUpSubCategorie;
 			sourceTree = "<group>";
@@ -343,7 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F46B1B5E23D622320060691B /* LaunchScreen.storyboard in Resources */,
-				F46B1B9523D62F380060691B /* subjectsAndTeachers.json in Resources */,
+				F46B1BA423D75F540060691B /* subjectsAndTeachers.json in Resources */,
+				F46B1BAE23D78AAD0060691B /* Categories in Resources */,
 				F46B1B5B23D622320060691B /* Assets.xcassets in Resources */,
 				F46B1B5923D6222F0060691B /* Main.storyboard in Resources */,
 			);
@@ -373,15 +372,16 @@
 				F46B1B9023D628530060691B /* HomePresenter.swift in Sources */,
 				F46B1B8E23D627710060691B /* Subjects.swift in Sources */,
 				F46B1B8823D622DE0060691B /* HomeTableViewController.swift in Sources */,
+				F46B1BA623D76C4D0060691B /* SignUpSubCategorieProtocols.swift in Sources */,
 				F46B1B9F23D64FF90060691B /* Subject.swift in Sources */,
 				F46B1B9823D634720060691B /* Decode.swift in Sources */,
+				F46B1BAA23D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift in Sources */,
 				F46B1B9D23D64EB20060691B /* HomeTableViewCell.swift in Sources */,
 				F46B1B9223D6286A0060691B /* HomeProtocols.swift in Sources */,
 				F46B1BA223D65A230060691B /* SignUpSubCategorieViewController.swift in Sources */,
 				F46B1B9B23D6459C0060691B /* RespositoryHome.swift in Sources */,
 				F46B1B5223D6222F0060691B /* AppDelegate.swift in Sources */,
 				F46B1B5423D6222F0060691B /* SceneDelegate.swift in Sources */,
-				F46B1B8A23D626640060691B /* CategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

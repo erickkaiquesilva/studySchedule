@@ -78,7 +78,7 @@
         <!--Categories Table View Controller-->
         <scene sceneID="xnq-No-8NW">
             <objects>
-                <tableViewController id="HXe-jT-nNJ" customClass="CategoriesTableViewController" customModule="GuiaEstudo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="HXe-jT-nNJ" customClass="CategoriesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wfI-9a-Q5N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,6 +250,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX0-yL-BlZ">
                                 <rect key="frame" x="374" y="10" width="30" height="30"/>
                                 <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="closeSignUpActivity:" destination="OH9-9Z-TNI" eventType="touchUpInside" id="lur-6U-bWK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.90266481164383561" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

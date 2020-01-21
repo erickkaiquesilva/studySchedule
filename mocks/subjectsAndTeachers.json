@@ -1,0 +1,18 @@
+{
+    "teachers": [
+        "marcio",
+        "carlos",
+        "robson",
+        "lúcia",
+        "erica",
+        "giovanna"
+    ],
+    "subjects": [
+        "matemática",
+        "portugues",
+        "história",
+        "ingles",
+        "ciencias",
+        "filosofia"
+    ]
+}
