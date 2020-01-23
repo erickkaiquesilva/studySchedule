@@ -38,7 +38,11 @@ extension SignUpSubCategoriePickerViewDataSource: UIPickerViewDataSource, UIPick
 
             return "OPS!!! Falha."
         }
-        
         return items[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        delegate?.updatePickerView(items[row], pickerView: pickerView)
     }
 }

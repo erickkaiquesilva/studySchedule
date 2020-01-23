@@ -14,6 +14,7 @@ class HomeTableViewController: UITableViewController, HomeTableViewControllerDel
     let homePresenter: HomePresenterDelegate = HomePresenter()
     var subjects: [Subject] = []
     let lbAlert = UILabel()
+    var subject: Subject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,14 @@ class HomeTableViewController: UITableViewController, HomeTableViewControllerDel
         
         return subjects.count
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "subCategorieSegue" {
+//            let vc = segue.destination as! CategoriesTableViewController
+//            vc.subject = subject
+//        }
+//
+//    }
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
@@ -57,7 +66,8 @@ class HomeTableViewController: UITableViewController, HomeTableViewControllerDel
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let subject = subjects[indexPath.row]
-        performSegue(withIdentifier: "subCategorieSegue", sender: subject)
+        self.subject = subject
+        homePresenter.showView(subject)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

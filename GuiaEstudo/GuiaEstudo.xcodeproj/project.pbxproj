@@ -26,7 +26,13 @@
 		F46B1BA423D75F540060691B /* subjectsAndTeachers.json in Resources */ = {isa = PBXBuildFile; fileRef = F46B1BA323D75F540060691B /* subjectsAndTeachers.json */; };
 		F46B1BA623D76C4D0060691B /* SignUpSubCategorieProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BA523D76C4D0060691B /* SignUpSubCategorieProtocols.swift */; };
 		F46B1BAA23D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BA923D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift */; };
-		F46B1BAE23D78AAD0060691B /* Categories in Resources */ = {isa = PBXBuildFile; fileRef = F46B1BAD23D78AAD0060691B /* Categories */; };
+		F46B1BB023D78C8B0060691B /* Active.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BAF23D78C8B0060691B /* Active.swift */; };
+		F46B1BB223D78D3A0060691B /* SignUpSubCategoriePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BB123D78D3A0060691B /* SignUpSubCategoriePresenter.swift */; };
+		F46B1BB623D7959B0060691B /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BB523D7959A0060691B /* CategoriesTableViewController.swift */; };
+		F46B1BBB23D8CC6D0060691B /* RouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BBA23D8CC6D0060691B /* RouterApp.swift */; };
+		F46B1BBD23D8CCB10060691B /* RouterAppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BBC23D8CCB10060691B /* RouterAppProtocol.swift */; };
+		F46B1BBF23DA29980060691B /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BBE23DA29980060691B /* CategoriesPresenter.swift */; };
+		F46B1BC123DA29DE0060691B /* CategoriesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B1BC023DA29DE0060691B /* CategoriesProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +78,13 @@
 		F46B1BA323D75F540060691B /* subjectsAndTeachers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = subjectsAndTeachers.json; path = ../mocks/subjectsAndTeachers.json; sourceTree = SOURCE_ROOT; };
 		F46B1BA523D76C4D0060691B /* SignUpSubCategorieProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSubCategorieProtocols.swift; sourceTree = "<group>"; };
 		F46B1BA923D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSubCategoriePickerViewDataSource.swift; sourceTree = "<group>"; };
-		F46B1BAD23D78AAD0060691B /* Categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Categories; sourceTree = "<group>"; };
+		F46B1BAF23D78C8B0060691B /* Active.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Active.swift; sourceTree = "<group>"; };
+		F46B1BB123D78D3A0060691B /* SignUpSubCategoriePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSubCategoriePresenter.swift; sourceTree = "<group>"; };
+		F46B1BB523D7959A0060691B /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		F46B1BBA23D8CC6D0060691B /* RouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterApp.swift; sourceTree = "<group>"; };
+		F46B1BBC23D8CCB10060691B /* RouterAppProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAppProtocol.swift; sourceTree = "<group>"; };
+		F46B1BBE23DA29980060691B /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		F46B1BC023DA29DE0060691B /* CategoriesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,12 +167,12 @@
 		F46B1B8123D622460060691B /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F46B1BB723D8CC4A0060691B /* Router */,
 				F46B1B9923D645620060691B /* Repositories */,
 				F46B1B9623D634630060691B /* Helper */,
 				F46B1B8B23D627330060691B /* Models */,
 				F46B1BA023D65A020060691B /* SignUpSubCategorie */,
-				F46B1B8523D6227E0060691B /* SubCategories */,
-				F46B1BAD23D78AAD0060691B /* Categories */,
+				F46B1BB423D7959A0060691B /* Categories */,
 				F46B1B8223D6224E0060691B /* Home */,
 			);
 			path = App;
@@ -177,13 +189,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		F46B1B8523D6227E0060691B /* SubCategories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SubCategories;
-			sourceTree = "<group>";
-		};
 		F46B1B8B23D627330060691B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +203,7 @@
 			children = (
 				F46B1B8D23D627710060691B /* Subjects.swift */,
 				F46B1B9E23D64FF90060691B /* Subject.swift */,
+				F46B1BAF23D78C8B0060691B /* Active.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -232,8 +238,29 @@
 				F46B1BA123D65A230060691B /* SignUpSubCategorieViewController.swift */,
 				F46B1BA523D76C4D0060691B /* SignUpSubCategorieProtocols.swift */,
 				F46B1BA923D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift */,
+				F46B1BB123D78D3A0060691B /* SignUpSubCategoriePresenter.swift */,
 			);
 			path = SignUpSubCategorie;
+			sourceTree = "<group>";
+		};
+		F46B1BB423D7959A0060691B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F46B1BB523D7959A0060691B /* CategoriesTableViewController.swift */,
+				F46B1BBE23DA29980060691B /* CategoriesPresenter.swift */,
+				F46B1BC023DA29DE0060691B /* CategoriesProtocols.swift */,
+			);
+			name = Categories;
+			path = ../../../../../Documents/studySchedule/GuiaEstudo/GuiaEstudo/App/Categories;
+			sourceTree = "<group>";
+		};
+		F46B1BB723D8CC4A0060691B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F46B1BBA23D8CC6D0060691B /* RouterApp.swift */,
+				F46B1BBC23D8CCB10060691B /* RouterAppProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +369,6 @@
 			files = (
 				F46B1B5E23D622320060691B /* LaunchScreen.storyboard in Resources */,
 				F46B1BA423D75F540060691B /* subjectsAndTeachers.json in Resources */,
-				F46B1BAE23D78AAD0060691B /* Categories in Resources */,
 				F46B1B5B23D622320060691B /* Assets.xcassets in Resources */,
 				F46B1B5923D6222F0060691B /* Main.storyboard in Resources */,
 			);
@@ -372,15 +398,22 @@
 				F46B1B9023D628530060691B /* HomePresenter.swift in Sources */,
 				F46B1B8E23D627710060691B /* Subjects.swift in Sources */,
 				F46B1B8823D622DE0060691B /* HomeTableViewController.swift in Sources */,
+				F46B1BB623D7959B0060691B /* CategoriesTableViewController.swift in Sources */,
 				F46B1BA623D76C4D0060691B /* SignUpSubCategorieProtocols.swift in Sources */,
+				F46B1BBF23DA29980060691B /* CategoriesPresenter.swift in Sources */,
 				F46B1B9F23D64FF90060691B /* Subject.swift in Sources */,
+				F46B1BC123DA29DE0060691B /* CategoriesProtocols.swift in Sources */,
 				F46B1B9823D634720060691B /* Decode.swift in Sources */,
 				F46B1BAA23D771790060691B /* SignUpSubCategoriePickerViewDataSource.swift in Sources */,
 				F46B1B9D23D64EB20060691B /* HomeTableViewCell.swift in Sources */,
 				F46B1B9223D6286A0060691B /* HomeProtocols.swift in Sources */,
+				F46B1BBD23D8CCB10060691B /* RouterAppProtocol.swift in Sources */,
 				F46B1BA223D65A230060691B /* SignUpSubCategorieViewController.swift in Sources */,
 				F46B1B9B23D6459C0060691B /* RespositoryHome.swift in Sources */,
+				F46B1BB223D78D3A0060691B /* SignUpSubCategoriePresenter.swift in Sources */,
+				F46B1BB023D78C8B0060691B /* Active.swift in Sources */,
 				F46B1B5223D6222F0060691B /* AppDelegate.swift in Sources */,
+				F46B1BBB23D8CC6D0060691B /* RouterApp.swift in Sources */,
 				F46B1B5423D6222F0060691B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

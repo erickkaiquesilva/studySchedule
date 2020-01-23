@@ -10,7 +10,7 @@
         <!--Lista de Matérias-->
         <scene sceneID="UN7-uM-2Dg">
             <objects>
-                <tableViewController id="v4X-hr-zMF" customClass="HomeTableViewController" customModule="GuiaEstudo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeTableViewController" id="v4X-hr-zMF" customClass="HomeTableViewController" customModule="GuiaEstudo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vrl-cN-QIT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,9 +67,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lista de Matérias" id="OPz-mP-LGL"/>
-                    <connections>
-                        <segue destination="HXe-jT-nNJ" kind="show" identifier="subCategorieSegue" id="v87-Vn-6Cb"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msc-ez-U4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,13 +75,13 @@
         <!--Categories Table View Controller-->
         <scene sceneID="xnq-No-8NW">
             <objects>
-                <tableViewController id="HXe-jT-nNJ" customClass="CategoriesTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CategoriesTableViewController" id="HXe-jT-nNJ" customClass="CategoriesTableViewController" customModule="GuiaEstudo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wfI-9a-Q5N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="YQK-T6-0Y0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="YQK-T6-0Y0">
                                 <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YQK-T6-0Y0" id="XEx-3d-EVl">
@@ -124,7 +121,7 @@
                         <barButtonItem key="backBarButtonItem" title="&lt;" id="rD7-ra-ejD"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rUh-fA-qfq">
                             <connections>
-                                <segue destination="OH9-9Z-TNI" kind="showDetail" identifier="signUpCategorie" id="7Kv-iS-BJF"/>
+                                <action selector="showSignUpActivity:" destination="HXe-jT-nNJ" id="Ykx-Ls-dHV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -136,13 +133,13 @@
         <!--Sign Up Sub Categorie View Controller-->
         <scene sceneID="P3k-ry-P7j">
             <objects>
-                <viewController id="OH9-9Z-TNI" customClass="SignUpSubCategorieViewController" customModule="GuiaEstudo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSubCategorieViewController" id="OH9-9Z-TNI" customClass="SignUpSubCategorieViewController" customModule="GuiaEstudo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bgc-Yx-kH7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZr-5V-WhL">
-                                <rect key="frame" x="16" y="20" width="382" height="768"/>
+                                <rect key="frame" x="16" y="64" width="382" height="778"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastre Tarefas dentro da Matéria de:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHw-NW-5V1">
                                         <rect key="frame" x="16" y="20" width="350" height="64.5"/>
@@ -203,7 +200,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAF-cs-H19">
-                                        <rect key="frame" x="35" y="702" width="312" height="50"/>
+                                        <rect key="frame" x="35" y="712" width="312" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="WKN-xe-QKG"/>
                                         </constraints>
@@ -248,7 +245,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX0-yL-BlZ">
-                                <rect key="frame" x="374" y="10" width="30" height="30"/>
+                                <rect key="frame" x="374" y="54" width="30" height="30"/>
                                 <state key="normal" image="cancel"/>
                                 <connections>
                                     <action selector="closeSignUpActivity:" destination="OH9-9Z-TNI" eventType="touchUpInside" id="lur-6U-bWK"/>
@@ -276,12 +273,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1u-wb-70i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492.753623188406" y="928.79464285714278"/>
+            <point key="canvasLocation" x="1493" y="895"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Router App-->
         <scene sceneID="FWG-sI-oyp">
             <objects>
-                <navigationController id="zkN-5B-llB" sceneMemberID="viewController">
+                <navigationController id="zkN-5B-llB" customClass="RouterApp" customModule="GuiaEstudo" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nBf-VT-cv0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

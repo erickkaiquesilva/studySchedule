@@ -20,18 +20,27 @@ class SignUpSubCategorieViewController: UIViewController {
     
     // MARK: - Properties
     
+    var subject: Subject?
+    let levels = ["Básico", "Intermediário", "Avançado"]
+    
+    var actives: [Active] = []
+    
+    var presenter: SignUpSubCategoriePresenterProtocol = SignUpSubCategoriePresenter()
     
     var delegatedelegatePickerViewTeacher: UIPickerViewSignUpSubCategorieProtocol? = SignUpSubCategoriePickerViewDataSource()
     
     var delegatedelegatePickerViewLevel: UIPickerViewSignUpSubCategorieProtocol? = SignUpSubCategoriePickerViewDataSource()
     
-    var teachers = ["Carlos", "João", "Isadora"]
-    var level = ["Básico", "Intermediário", "Avançado"]
+    var selectedTeacher: String?
+    var selectedLevel: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.controller = self
+        
         delegatedelegatePickerViewTeacher?.delegate = self
+        delegatedelegatePickerViewLevel?.delegate = self
         
         selectedTeachers.dataSource = delegatedelegatePickerViewTeacher
         selectedTeachers.delegate = delegatedelegatePickerViewTeacher
@@ -39,18 +48,23 @@ class SignUpSubCategorieViewController: UIViewController {
         selectedNivel.delegate = delegatedelegatePickerViewLevel
         selectedNivel.dataSource = delegatedelegatePickerViewLevel
         
-        teste()
+        bindObjectPickerView()
     }
     
-    func teste() {
-        delegatedelegatePickerViewTeacher?.object(teachers)
-        delegatedelegatePickerViewLevel?.object(level)
+    func bindObjectPickerView() {
+        guard let teacher = subject?.teacher else { return }
+        delegatedelegatePickerViewTeacher?.object([teacher])
+        delegatedelegatePickerViewLevel?.object(levels)
     }
     
     
     // MARK: - IBActions
     @IBAction func signUpActivity(_ sender: Any) {
         
+        presenter.registerActive(nameActive: nameActivityTextField.text,
+                                 teacher: selectedTeacher,
+                                 level: selectedLevel,
+                                 workload: workloadTextField.text)
     }
     
     @IBAction func closeSignUpActivity(_ sender: Any) {
@@ -58,9 +72,24 @@ class SignUpSubCategorieViewController: UIViewController {
     }
 }
 
+extension SignUpSubCategorieViewController: SignUpSubCategorieViewControllerDelegate {
+    func responseRegister(active: Active) {
+        actives.append(active)
+        
+    }
+}
 
 extension SignUpSubCategorieViewController: UIPickerViewSignUpDataSourceDelegate {
     func showError() {
         print("Vazio")
+    }
+    
+    func updatePickerView(_ string: String, pickerView: UIPickerView) {
+        
+        if selectedTeachers == pickerView {
+            selectedTeacher = string
+        } else {
+            selectedLevel = string
+        }
     }
 }

@@ -12,6 +12,7 @@ import UIKit
 protocol HomePresenterDelegate: class {
     var controller: HomeTableViewControllerDelegate? { get set }
     func createSubjects()
+    func showView(_ subject: Subject)
 }
 
 protocol HomeTableViewControllerDelegate: class {

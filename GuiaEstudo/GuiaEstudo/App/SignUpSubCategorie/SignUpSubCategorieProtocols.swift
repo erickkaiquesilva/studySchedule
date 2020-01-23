@@ -16,4 +16,18 @@ protocol UIPickerViewSignUpSubCategorieProtocol: UIPickerViewDelegate, UIPickerV
 
 protocol UIPickerViewSignUpDataSourceDelegate: class {
     func showError()
+    func updatePickerView(_ string: String, pickerView: UIPickerView)
+}
+
+protocol SignUpSubCategoriePresenterProtocol {
+    var controller: SignUpSubCategorieViewControllerDelegate? { get set }
+    func registerActive(nameActive: String?, teacher: String?, level: String?, workload: String? )
+}
+
+protocol SignUpSubCategorieViewControllerDelegate: class {
+    func responseRegister(active: Active)
+}
+
+protocol SignUpSubCategorieFinderDelegate: class {
+    func addActivie(active: Active)
 }

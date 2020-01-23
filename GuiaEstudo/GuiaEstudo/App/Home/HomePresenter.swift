@@ -39,4 +39,14 @@ class HomePresenter: HomePresenterDelegate {
         
         return materias
     }
+    
+    func showError() {
+        
+    }
+    
+    func showView(_ subject: Subject) {
+        if let router = routerApp {
+            router.categoriesViewController(subject)
+        }
+    }
 }
